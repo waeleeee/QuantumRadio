@@ -1,0 +1,25 @@
+/* src/styles.css or src/index.css */
+.modal-content table {
+  width: 100%;
+  min-width: 0; /* Prevent table from forcing overflow */
+}
+
+.modal-content th,
+.modal-content td {
+  word-wrap: break-word; /* Break long words */
+  max-width: 0; /* Allow content to wrap */
+  padding: 0.5rem; /* Ensure padding doesn't push content out */
+}
+
+.modal-content img {
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .modal-content th,
+  .modal-content td {
+    font-size: 0.875rem; /* Smaller font size on mobile */
+  }
+}

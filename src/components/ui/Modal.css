@@ -1,0 +1,68 @@
+/* src/components/ui/Modal.css */
+.modal-content table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed; /* Ensure columns respect assigned widths */
+}
+
+.modal-content th,
+.modal-content td {
+  word-wrap: break-word;
+  max-width: 0;
+  padding: 0.5rem;
+  overflow: hidden; /* Prevent content from spilling out */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+/* Specific widths for each column */
+.modal-content th:nth-child(1),
+.modal-content td:nth-child(1) {
+  width: 40%; /* Product column */
+}
+
+.modal-content th:nth-child(2),
+.modal-content td:nth-child(2) {
+  width: 20%; /* Price column */
+}
+
+.modal-content th:nth-child(3),
+.modal-content td:nth-child(3) {
+  width: 20%; /* Quantity column */
+}
+
+.modal-content th:nth-child(4),
+.modal-content td:nth-child(4) {
+  width: 20%; /* Subtotal column */
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .modal-content th,
+  .modal-content td {
+    font-size: 0.875rem;
+  }
+
+  .modal-content th:nth-child(1),
+  .modal-content td:nth-child(1) {
+    width: 30%; /* Adjust product column width for mobile */
+  }
+
+  .modal-content th:nth-child(2),
+  .modal-content td:nth-child(2) {
+    width: 25%; /* Adjust price column for mobile */
+  }
+
+  .modal-content th:nth-child(3),
+  .modal-content td:nth-child(3) {
+    width: 20%; /* Adjust quantity column for mobile */
+  }
+
+  .modal-content th:nth-child(4),
+  .modal-content td:nth-child(4) {
+    width: 25%; /* Adjust subtotal column for mobile */
+  }
+}
